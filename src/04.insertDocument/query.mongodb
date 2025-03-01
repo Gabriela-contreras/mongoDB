@@ -1,0 +1,133 @@
+//PRACTICAMOS COMANDOS
+
+// ---------------------------
+// consultas a mongo
+//Siempre colocamos el use para seleccionar la base de datos
+
+use("platzi_store")
+
+//insertamos un producto
+// db.products.insertOne({
+//   id:2,
+//   product: "Curso intermedio ingles",
+//   price:3000,
+//   category: "Languages"
+// })
+
+
+//buscamos los productos
+// db.products.find()
+
+
+// actualizar un producto con $set
+
+// db.products.updateOne(
+//   { _id: 1 },
+//   { $set: { price: 5000 } }
+// )
+
+
+//actualizar un producto con  $inc
+// incrementa el precio en 2000 del producto con id 1 con el id de mongo
+
+// db.products.updateOne(
+//   {
+//   _id : ObjectId('67c23cea4d79ebd16a5ba1f9')
+//   },
+//   {
+//     $inc : {
+//       price:2000
+//     }
+//   }
+// )
+
+
+// Actualizar un producto en masa
+
+// db.products.updateMany(
+//   {
+//   category: "Languages"
+
+// },
+// {
+//   $set:{
+//     description: "Mejora tu habilidad con los idiomas"
+//   }
+// }
+// )
+
+//actualizar atributo con rename
+// db.products.updateMany(
+//   {
+//   category: "Languages"
+
+// },
+// {
+//   $rename:{
+//     description: "atributo_nuevo"
+//   }
+// }
+// )
+
+
+//eliminar un atributo
+
+// db.products.updateMany(
+//   {
+//   category: "Languages"
+
+// },
+// {
+//   $unset:{
+//     atributo_nuevo: ""
+//   }
+// }
+// )
+
+// actualicemos arrays con $push y pull
+
+// db.products.updateMany({
+//   category: "Languages"
+// },
+// {
+//   $set :{
+//     array : ["ingles " , "frances ", "aleman","espan" ]
+
+//   }
+// })
+
+
+// quitar elemento de un array
+
+// db.products.updateMany({},
+// {
+//   $pull :{
+//     array :['espan']
+//   }
+// })
+
+
+
+//agregar elementos a un array con $push
+
+// db.products.updateMany({},
+// {
+//   $push :{
+//     array :['italiano']
+//   }
+// })
+
+
+// actualizar varios elementos con $in
+
+// db.products.updateMany({},
+//   {
+//     $pull: {
+//       array: {
+//         $in: ['italiano ', 'aleman']
+//       }
+//     }
+//   })
+
+
+// db.products.find()

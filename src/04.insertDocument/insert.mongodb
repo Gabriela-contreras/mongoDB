@@ -1,0 +1,16 @@
+use ("platzi_store")
+
+
+db.products.insertOne({
+  id:1,
+  product: "Curso basico frances",
+  price:3000,
+  category: "Languages"
+})
+
+db.products.insertOne({
+  id:2,
+  product: "Curso intermedio ingles",
+  price:3000,
+  category: "Languages"
+})
